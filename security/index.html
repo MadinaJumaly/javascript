@@ -18,9 +18,9 @@
     <div id="output"></div>
 </section>
 
-<script src="script.js"></script>
+<script type="module">
+    import { crossSiteScripting, remoteCodeExecution, SQLInjection, safeRequest } from './script.js';
 
-<script>
     crossSiteScripting(`<script>alert("XSS attack!")<\/script>`);
 
     remoteCodeExecution('alert("Vulnerable code execution!")');
